@@ -10,9 +10,14 @@ import java.io.IOException;
 @WebServlet("/productos")
 public class ProductoServlet extends HttpServlet {
     private final ProductoService service = new ProductoService();
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        if (!verificarSesion(req, resp)) return;
+        
+
         String accion = req.getParameter("accion");
         if (accion == null) accion = "listar";
         switch (accion) {
@@ -36,6 +41,7 @@ public class ProductoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
         req.setCharacterEncoding("UTF-8");
+        if (!verificarSesion(req, resp)) return;
         String accion = req.getParameter("accion");
         if ("guardar".equals(accion)) guardar(req, resp);
         else if ("actualizar".equals(accion)) actualizar(req, resp);
@@ -93,5 +99,15 @@ public class ProductoServlet extends HttpServlet {
             path)
             throws ServletException, IOException {
         req.getRequestDispatcher(path).forward(req, resp);
+    }
+
+    private boolean verificarSesion(HttpServletRequest req, HttpServletResponse resp)
+            throws IOException {
+        HttpSession s = req.getSession(false);
+        if (s == null || s.getAttribute("usuarioActual") == null) {
+            resp.sendRedirect(req.getContextPath() + "/login");
+            return false;
+        }
+        return true;
     }
 }
