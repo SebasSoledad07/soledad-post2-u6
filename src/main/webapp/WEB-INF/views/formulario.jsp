@@ -29,7 +29,7 @@
 
     <label>Nombre:
         <input type="text" name="nombre" required
-               value="${empty nombre ? (empty producto ? '' : producto.nombre) : nombre}"
+               value="${nombre}"
                class="${not empty errores.nombre ? 'input-error' : ''}">
         <c:if test="${not empty errores.nombre}">
             <span class="campo-error"><c:out value="${errores.nombre}"/></span>
@@ -38,7 +38,7 @@
 
     <label>Categoría:
         <input type="text" name="categoria"
-               value="${empty categoria ? (empty producto ? '' : producto.categoria) : categoria}"
+               value="${categoria}"
                class="${not empty errores.categoria ? 'input-error' : ''}">
         <c:if test="${not empty errores.categoria}">
             <span class="campo-error"><c:out value="${errores.categoria}"/></span>
@@ -47,7 +47,7 @@
 
     <label>Precio:
         <input type="number" name="precio" step="0.01" min="0" required
-               value="${empty precio ? (empty producto ? '' : producto.precio) : precio}"
+               value="${precio}"
                class="${not empty errores.precio ? 'input-error' : ''}">
         <c:if test="${not empty errores.precio}">
             <span class="campo-error"><c:out value="${errores.precio}"/></span>
@@ -56,7 +56,7 @@
 
     <label>Stock:
         <input type="number" name="stock" min="0" required
-               value="${empty stock ? (empty producto ? '' : producto.stock) : stock}"
+               value="${stock}"
                class="${not empty errores.stock ? 'input-error' : ''}">
         <c:if test="${not empty errores.stock}">
             <span class="campo-error"><c:out value="${errores.stock}"/></span>
