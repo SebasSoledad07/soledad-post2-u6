@@ -35,14 +35,17 @@ mvn clean package -DskipTests
 
 ## Capturas
 
-Las imágenes se incluyen en el repositorio en `docs/capturas/post2`:
+Las imágenes se incluyen en el repositorio en `docs/capturas/post1` y `docs/capturas/post2`:
 
-- `docs/capturas/post2/lista.png` — Vista del listado de productos
-- `docs/capturas/post2/creado.png` — Mensaje de creación exitosa
-- `docs/capturas/post2/verifica.png` — Mensaje de verificación / login
-- `docs/capturas/post2/actualizar.png` — Producto actualizado
-- `docs/capturas/post2/eliminar.png` — Producto eliminado
+- `docs/capturas/post1/lista.png` — Vista del listado de productos
+- `docs/capturas/post1/creado.png` — Mensaje de creación exitosa
+- `docs/capturas/post1/verifica.png` — Mensaje de verificación / login
+- `docs/capturas/post1/actualizar.png` — Producto actualizado
+- `docs/capturas/post1/eliminar.png` — Producto eliminado
 
+- `docs/capturas/post2/productos-en.png` — Listado de productos en inglés
+- `docs/capturas/post2/productos-es.png` — Listado de productos en español
+- `docs/capturas/post2/login.png` — Página de login
 Puedes ver las imágenes en el repositorio (ruta relativa mostrada arriba) o copiarlas desde `docs/capturas/post2` al destino que necesites.
 
 ### Visualización rápida (post2)
@@ -52,7 +55,6 @@ Puedes ver las imágenes en el repositorio (ruta relativa mostrada arriba) o cop
 ![Listado de productos - Español](docs/capturas/post2/productos-es.png)
 
 ![Verificación / Login](docs/capturas/post2/login.png)
-
 
 
 ## Funcionalidades implementadas
