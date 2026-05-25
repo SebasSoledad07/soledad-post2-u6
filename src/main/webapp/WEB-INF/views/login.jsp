@@ -33,11 +33,6 @@
         <button type="submit">Entrar</button>
     </form>
 
-    <div style="margin-top: 16px; font-size: 0.95rem; color: #475569; line-height: 1.5;">
-        <strong>Credenciales de prueba:</strong><br>
-        admin / Admin123!<br>
-        viewer / View456!
-    </div>
 </div>
 </body>
 </html>

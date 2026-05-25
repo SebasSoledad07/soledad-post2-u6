@@ -215,3 +215,24 @@ form > a {
 		border-bottom: 0;
 	}
 }
+
+/* Estilos para validación de formulario */
+.alert-error {
+	margin: 0 0 18px;
+	padding: 12px 14px;
+	border-radius: 10px;
+	background: #fff1f2;
+	color: #8b1a1a;
+	border: 1px solid #fecaca;
+}
+.input-error {
+	border-color: #ef4444;
+	box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08);
+}
+.campo-error {
+	display: block;
+	margin-top: 6px;
+	color: #b91c1c;
+	font-size: 0.9rem;
+}
+
